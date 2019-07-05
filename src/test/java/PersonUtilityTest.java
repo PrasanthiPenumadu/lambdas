@@ -21,9 +21,10 @@ public class PersonUtilityTest {
         lpeople.add(person);
         lpeople.add(person1);
         lpeople.add(person2);
-
+        PersonUtilityLambas pUl=new PersonUtilityLambas();
    PersonUtility.printPersonsOlderThan(lpeople, 7);
-      //  Assert.assertEquals(, );
+   PersonUtilityLambas.printPersonsOlderThan(lpeople, 7);
+
     }
 
     @Test
