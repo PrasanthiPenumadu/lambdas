@@ -10,6 +10,14 @@ public class Person {
     String emailAddress;
     List<Person> lPeople;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Person(String name, LocalDate birthday, Sex gender, String emailAddress) {
         this.name = name;
         this.birthday = birthday;
