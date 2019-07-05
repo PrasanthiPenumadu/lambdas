@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -13,14 +14,31 @@ public class PersonTest {
     public void getAge() {
         Person person = new Person("heidi", LocalDate.of(1990, 9, 19),
                 Person.Sex.FEMALE, "h.com");
-        System.out.println(person.getAge());
+        Assert.assertEquals(28,person.getAge(), 0.0009);
     }
-
-    @org.junit.Test
+    @Test
+    public void getAge1() {
+        Person person = new Person("heidi", LocalDate.of(1990, 9, 19),
+                Person.Sex.FEMALE, "h.com");
+        Assert.assertNotEquals(0,person.getAge(), 0.0009);
+    }
+    @Test
     public void printPerson() {
         Person person = new Person("heidi", LocalDate.of(1990, 9, 19),
                 Person.Sex.FEMALE, "h.com");
         person.printPerson();
+    }
+    @Test
+    public void getName() {
+        Person person = new Person("heidi", LocalDate.of(1990, 9, 19),
+                Person.Sex.FEMALE, "h.com");
+        Assert.assertEquals("heidi",person.getName());
+    }
+    @Test
+    public void getName1() {
+        Person person = new Person("heidi", LocalDate.of(1990, 9, 19),
+                Person.Sex.FEMALE, "h.com");
+        Assert.assertNotEquals("",person.getName());
     }
 
 
